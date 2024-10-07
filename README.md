@@ -5,7 +5,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/automation-email-sender.git
+   git clone https://github.com/TongKW/automation-email-sender.git
    cd automation-email-sender
    ```
 
