@@ -10,7 +10,7 @@ function validateInputs({ lowerBoundSleepTime, upperBoundSleepTime, userObjects 
   if (!process.env.RESEND_API_KEY) {
     throw new Error("API key not found in environment variables.");
   }
-  if (!Array.isArray(userObjects) || !userObjects.every((obj) => obj.email && obj.name)) {
+  if (!Array.isArray(userObjects) || !userObjects.every((obj) => "email" in obj && "name" in obj)) {
     throw new Error("Invalid userObjects format. Each object must have 'email' and 'name' properties.");
   }
   if (typeof lowerBoundSleepTime !== "number" || typeof upperBoundSleepTime !== "number") {
